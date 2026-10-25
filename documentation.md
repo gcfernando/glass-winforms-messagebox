@@ -27,7 +27,7 @@ Find installation, WinForms dialog examples and the source contracts behind Glas
 
 ## 🔗 Source references
 
-[Public facade](Glass.Message/GlassMessage.cs) · [Fluent builder](Glass.Message/GlassBuilder.cs) · [Progress controller](Glass.Message/GlassProgressController.cs) · [Release workflow](.github/workflows/release.yml)
+[Public facade](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/Glass.Message/GlassMessage.cs) · [Fluent builder](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/Glass.Message/GlassBuilder.cs) · [Progress controller](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/Glass.Message/GlassProgressController.cs) · [Release workflow](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/.github/workflows/release.yml)
 
 Dialog creation belongs on the WinForms UI thread. The progress controller supports marshaled worker updates; this does not make all dialog APIs callable from arbitrary threads.
 
@@ -35,4 +35,4 @@ Dialog creation belongs on the WinForms UI thread. The progress controller suppo
 
 This index is also rendered by the repository's GitHub Pages site. Relative links above point to the authored repository documents; package READMEs target NuGet readers and may use absolute GitHub links.
 
-[Repository](https://github.com/gcfernando/glass) · [Project overview](README.md)
+[Repository](https://github.com/gcfernando/glass-winforms-messagebox) · [Project overview](README.md)

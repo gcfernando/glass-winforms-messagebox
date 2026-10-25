@@ -9,7 +9,7 @@ Mica & Acrylic backdrops · dark/light theme detection · fluent builder API · 
 ![.NET](https://img.shields.io/badge/.NET-4.8.1%20%7C%208%20%7C%209%20%7C%2010-512BD4?logo=dotnet&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-3da639)
 
-![Glass.Message feature gallery — modern Windows 11 styled WinForms dialog](https://raw.githubusercontent.com/gcfernando/glass/main/Images/Feature%20Gallery.png)
+![Glass.Message feature gallery — modern Windows 11 styled WinForms dialog](https://raw.githubusercontent.com/gcfernando/glass-winforms-messagebox/main/Images/Feature%20Gallery.png)
 
 ---
 
@@ -35,7 +35,7 @@ No new dependencies. No additional configuration. Works on .NET Framework 4.8.1 
 
 This maintenance release coalesces rapid `GlassProgressController` updates and caches toast, close-button and countdown paint resources. The repository includes concurrency, handle-growth, lifecycle and DPI-capture tests. These describe available checks, not a fresh test result: run them in a Windows desktop session and inspect generated captures for visual quality.
 
-Full technical details: [CHANGELOG.md](https://github.com/gcfernando/glass/blob/main/CHANGELOG.md).
+Full technical details: [CHANGELOG.md](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/CHANGELOG.md).
 
 ---
 
@@ -191,11 +191,11 @@ await GlassToast.ShowAsync(new GlassToastOptions
 });
 ```
 
-![Fluent builder API — custom inputs, checkboxes, progress, themes](https://raw.githubusercontent.com/gcfernando/glass/main/Images/Fluent%20Builder%20API.png)
+![Fluent builder API — custom inputs, checkboxes, progress, themes](https://raw.githubusercontent.com/gcfernando/glass-winforms-messagebox/main/Images/Fluent%20Builder%20API.png)
 
-![Password input dialog with reveal-eye button and Caps Lock hint](https://raw.githubusercontent.com/gcfernando/glass/main/Images/Password%20Input.png)
+![Password input dialog with reveal-eye button and Caps Lock hint](https://raw.githubusercontent.com/gcfernando/glass-winforms-messagebox/main/Images/Password%20Input.png)
 
-![Activity-aware progress bar animating a download flow](https://raw.githubusercontent.com/gcfernando/glass/main/Images/Progress%20Activity%20%E2%80%94%20Download%20Flow.png)
+![Activity-aware progress bar animating a download flow](https://raw.githubusercontent.com/gcfernando/glass-winforms-messagebox/main/Images/Progress%20Activity%20%E2%80%94%20Download%20Flow.png)
 
 ---
 
@@ -230,10 +230,10 @@ Windows-only (WinForms). No third-party runtime dependencies.
 
 ## Documentation & links
 
-- 📖 **Full docs, gallery & API reference:** https://github.com/gcfernando/glass
-- 📜 **Changelog:** https://github.com/gcfernando/glass/blob/main/CHANGELOG.md
-- ⬇️ **Releases & pre-built binaries:** https://github.com/gcfernando/glass/releases
-- 🐛 **Issues & feature requests:** https://github.com/gcfernando/glass/issues
+- 📖 **Full docs, gallery & API reference:** https://github.com/gcfernando/glass-winforms-messagebox
+- 📜 **Changelog:** https://github.com/gcfernando/glass-winforms-messagebox/blob/main/CHANGELOG.md
+- ⬇️ **Releases & pre-built binaries:** https://github.com/gcfernando/glass-winforms-messagebox/releases
+- 🐛 **Issues & feature requests:** https://github.com/gcfernando/glass-winforms-messagebox/issues
 
 ---
 
@@ -244,4 +244,4 @@ MIT Licensed · © 2026 Gehan Fernando
 
 ## Documentation links
 
-[Read all Glass.Message guides online](https://gcfernando.github.io/glass/documentation/) · [Project overview](https://gcfernando.github.io/glass/) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)
+[Read all Glass.Message guides online](https://gcfernando.github.io/glass-winforms-messagebox/documentation/) · [Project overview](https://gcfernando.github.io/glass-winforms-messagebox/) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)

@@ -1,6 +1,6 @@
 # GitHub Pages documentation site; does not configure application deployment.
 url: "https://gcfernando.github.io"
-baseurl: "/glass"
+baseurl: "/glass-winforms-messagebox"
 title: "Glass.Message"
 description: "A Windows Forms MessageBox replacement with Mica and Acrylic backdrops, async dialogs, inline inputs, progress bars and toast notifications."
 lang: "en"
@@ -34,7 +34,7 @@ defaults:
       description: "Install Glass.Message from NuGet and use themed Windows Forms dialogs, async inputs, progress indicators and toast notifications."
 
 # Public documentation navigation and presentation.
-repository: gcfernando/glass
+repository: gcfernando/glass-winforms-messagebox
 theme: jekyll-theme-primer
 projects_hub: https://gcfernando.github.io/gcfernando/projects/
 project_category: "Libraries & packages"

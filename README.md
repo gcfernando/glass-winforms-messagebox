@@ -4,6 +4,8 @@
 
 # 🪟 Glass.Message — Modern MessageBox Replacement for WinForms (C#/.NET)
 
+**Read online:** [Documentation website](https://gcfernando.github.io/glass-winforms-messagebox/) · [All guides](https://gcfernando.github.io/glass-winforms-messagebox/documentation/)
+
 <a id="the-modern-messagebox-replacement-for-windows-desktop-apps"></a>
 
 Glass.Message is a C# Windows Forms dialog library for .NET Framework 4.8.1 and .NET 8, 9 and 10. It provides themed message dialogs, inline inputs, progress dialogs and toast notifications.
@@ -13,7 +15,7 @@ Mica &amp; Acrylic backdrops · dark/light theme detection · fluent builder · 
 <br/>
 
 [![Latest version](https://img.shields.io/nuget/v/Glass.Message?label=latest&color=0078D6&logo=nuget&logoColor=white&cacheSeconds=300)](https://www.nuget.org/packages/Glass.Message)
-[![Downloads](https://img.shields.io/github/downloads/gcfernando/glass/total?color=3da639&label=downloads&cacheSeconds=3600)](https://github.com/gcfernando/glass/releases)
+[![Downloads](https://img.shields.io/github/downloads/gcfernando/glass-winforms-messagebox/total?color=3da639&label=downloads&cacheSeconds=3600)](https://github.com/gcfernando/glass-winforms-messagebox/releases)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-4.8.1%20|%208%20|%209%20|%2010-512BD4?logo=dotnet&logoColor=white)
 ![UI](https://img.shields.io/badge/UI-WinForms-5C2D91)
@@ -21,11 +23,11 @@ Mica &amp; Acrylic backdrops · dark/light theme detection · fluent builder · 
 
 <br/>
 
-<a href="https://github.com/gcfernando/glass/releases/latest"><b>⬇️ Download the latest release</b></a> · <a href="CHANGELOG.md"><b>📜 Changelog</b></a>
+<a href="https://github.com/gcfernando/glass-winforms-messagebox/releases/latest"><b>⬇️ Download the latest release</b></a> · <a href="https://gcfernando.github.io/glass-winforms-messagebox/CHANGELOG.html"><b>📜 Changelog</b></a>
 
 <br/>
 
-<img src="Images/Feature%20Gallery.png" width="420" alt="Glass.Message feature gallery"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Feature%20Gallery.png" width="420" alt="Glass.Message feature gallery"/>
 
 <em>Themed dialogs, inline inputs, progress and toast notifications.</em>
 
@@ -69,11 +71,11 @@ GlassMessage.Show(
 </tr>
 <tr>
 <td align="center"><em>Flat, dated, fixed grey chrome</em></td>
-<td align="center"><img src="Images/Drop-in%20Replace%20%28Show%29.png" width="430" alt="Glass.Message dialog"/></td>
+<td align="center"><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Drop-in%20Replace%20%28Show%29.png" width="430" alt="Glass.Message dialog"/></td>
 </tr>
 </table>
 
-> `GlassMessage.Show(...)` returns `DialogResult`, but its overloads are **not signature-identical** to `MessageBox.Show(...)`. Glass takes `MessageBoxIcon` before `MessageBoxButtons`; the classic API takes buttons before icon. Reorder those arguments during migration and check the [facade signatures](Glass.Message/GlassMessage.cs) for owner/default-button overloads. Call dialog APIs from the WinForms UI (STA) thread.
+> `GlassMessage.Show(...)` returns `DialogResult`, but its overloads are **not signature-identical** to `MessageBox.Show(...)`. Glass takes `MessageBoxIcon` before `MessageBoxButtons`; the classic API takes buttons before icon. Reorder those arguments during migration and check the [facade signatures](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/Glass.Message/GlassMessage.cs) for owner/default-button overloads. Call dialog APIs from the WinForms UI (STA) thread.
 
 ---
 
@@ -165,24 +167,24 @@ progress.SetActivity(GlassProgressActivity.Sync);     // ripple eases both ways
 
 <table>
 <tr>
-<td align="center" width="50%"><b>Fluent builder + custom buttons</b><br/><img src="Images/Fluent%20Builder%20API.png" width="430" alt="Fluent builder"/></td>
-<td align="center" width="50%"><b>Inline text input</b><br/><img src="Images/Inline%20Text%20Input.png" width="430" alt="Text input"/></td>
+<td align="center" width="50%"><b>Fluent builder + custom buttons</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Fluent%20Builder%20API.png" width="430" alt="Fluent builder"/></td>
+<td align="center" width="50%"><b>Inline text input</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Inline%20Text%20Input.png" width="430" alt="Text input"/></td>
 </tr>
 <tr>
-<td align="center"><b>Password + reveal eye + Caps Lock hint</b><br/><img src="Images/Password%20Input.png" width="430" alt="Password input"/></td>
-<td align="center"><b>Drop-down picker</b><br/><img src="Images/Drop-down%20Input.png" width="430" alt="Dropdown input"/></td>
+<td align="center"><b>Password + reveal eye + Caps Lock hint</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Password%20Input.png" width="430" alt="Password input"/></td>
+<td align="center"><b>Drop-down picker</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Drop-down%20Input.png" width="430" alt="Dropdown input"/></td>
 </tr>
 <tr>
-<td align="center"><b>Expandable detail (stack traces)</b><br/><img src="Images/Expandable%20Detail%20Section.png" width="430" alt="Detail panel"/></td>
-<td align="center"><b>Determinate progress</b><br/><img src="Images/Determinate%20Progress%20Bar.png" width="430" alt="Progress bar"/></td>
+<td align="center"><b>Expandable detail (stack traces)</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Expandable%20Detail%20Section.png" width="430" alt="Detail panel"/></td>
+<td align="center"><b>Determinate progress</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Determinate%20Progress%20Bar.png" width="430" alt="Progress bar"/></td>
 </tr>
 <tr>
-<td align="center"><b>Countdown auto-close</b><br/><img src="Images/Countdown%20Auto-Close%20%20%2810%20s%29.png" width="430" alt="Countdown"/></td>
-<td align="center"><b>"Don't show again" checkbox</b><br/><img src="Images/Don't%20Show%20Again.png" width="430" alt="Checkbox"/></td>
+<td align="center"><b>Countdown auto-close</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Countdown%20Auto-Close%20%20%2810%20s%29.png" width="430" alt="Countdown"/></td>
+<td align="center"><b>"Don't show again" checkbox</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Don%27t%20Show%20Again.png" width="430" alt="Checkbox"/></td>
 </tr>
 <tr>
-<td align="center"><b>Async builder — awaitable rich dialogs</b><br/><img src="Images/Async%20Builder%20%28ShowExAsync%29.png" width="430" alt="Async builder"/></td>
-<td align="center"><b>Live progress controller</b><br/><img src="Images/Live%20Progress%20Controller.png" width="430" alt="Live progress controller"/></td>
+<td align="center"><b>Async builder — awaitable rich dialogs</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Async%20Builder%20%28ShowExAsync%29.png" width="430" alt="Async builder"/></td>
+<td align="center"><b>Live progress controller</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Live%20Progress%20Controller.png" width="430" alt="Live progress controller"/></td>
 </tr>
 </table>
 
@@ -190,7 +192,7 @@ progress.SetActivity(GlassProgressActivity.Sync);     // ripple eases both ways
 
 **Toasts** — non-modal, auto-stacking notifications at any corner
 
-<img src="Images/Toast%20%E2%80%94%20Four%20Corners.png" width="760" alt="Toasts at four corners"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Toast%20%E2%80%94%20Four%20Corners.png" width="760" alt="Toasts at four corners"/>
 
 </div>
 
@@ -277,7 +279,7 @@ Run this code from an existing Windows Forms UI event handler or startup path on
 
 <br/>
 
-Grab the latest build straight from the repo's **[Releases page](https://github.com/gcfernando/glass/releases)** → **Latest**. Each release includes:
+Grab the latest build straight from the repo's **[Releases page](https://github.com/gcfernando/glass-winforms-messagebox/releases)** → **Latest**. Each release includes:
 
 | Download | Use it for |
 |---|---|
@@ -396,7 +398,7 @@ GlassMessage.Show(
 
 <br/>
 
-<img src="Images/Fluent%20Builder%20API.png" width="460" alt="Fluent builder"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Fluent%20Builder%20API.png" width="460" alt="Fluent builder"/>
 
 Every method returns the builder, so calls chain.
 
@@ -428,7 +430,7 @@ GlassMessage.Create(
 
 <br/>
 
-<img src="Images/Auto-detect%20OS%20Theme.png" width="460" alt="Auto theme"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Auto-detect%20OS%20Theme.png" width="460" alt="Auto theme"/>
 
 ```csharp
 var theme    = GlassTheme.AutoDetect();
@@ -451,7 +453,7 @@ GlassMessage.Create($"Windows is currently in {modeName} mode…")
 
 <br/>
 
-<img src="Images/Countdown%20Auto-Close%20%20%2810%20s%29.png" width="460" alt="Countdown"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Countdown%20Auto-Close%20%20%2810%20s%29.png" width="460" alt="Countdown"/>
 
 Auto-confirms the **default** button after a delay, with a live circular countdown and a `(Ns)` suffix.
 
@@ -474,7 +476,7 @@ GlassMessage.Create("Your Contoso Portal session is about to expire.")
 
 <br/>
 
-<img src="Images/Don't%20Show%20Again.png" width="460" alt="Checkbox"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Don%27t%20Show%20Again.png" width="460" alt="Checkbox"/>
 
 ```csharp
 var r = GlassMessage.Create("Drive C: has only 4.2 GB of free space remaining.")
@@ -498,12 +500,12 @@ if (r.CheckBoxChecked) { /* persist the preference */ }
 
 <table>
 <tr>
-<td align="center"><b>Text</b><br/><img src="Images/Inline%20Text%20Input.png" width="350" alt="Text"/></td>
-<td align="center"><b>Password (Caps Lock hint on)</b><br/><img src="Images/Password%20Input.png" width="350" alt="Password"/></td>
+<td align="center"><b>Text</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Inline%20Text%20Input.png" width="350" alt="Text"/></td>
+<td align="center"><b>Password (Caps Lock hint on)</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Password%20Input.png" width="350" alt="Password"/></td>
 </tr>
 <tr>
-<td align="center"><b>Password (Caps Lock hint off)</b><br/><img src="Images/Password%20-%20Caps%20Lock%20Hint%20Off.png" width="350" alt="Password without Caps Lock hint"/></td>
-<td align="center"><b>Drop-down</b><br/><img src="Images/Drop-down%20Input.png" width="350" alt="Dropdown"/></td>
+<td align="center"><b>Password (Caps Lock hint off)</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Password%20-%20Caps%20Lock%20Hint%20Off.png" width="350" alt="Password without Caps Lock hint"/></td>
+<td align="center"><b>Drop-down</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Drop-down%20Input.png" width="350" alt="Dropdown"/></td>
 </tr>
 </table>
 
@@ -554,7 +556,7 @@ GlassMessage.Create("Choose the output format.")
 
 <br/>
 
-<img src="Images/Expandable%20Detail%20Section.png" width="460" alt="Detail"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Expandable%20Detail%20Section.png" width="460" alt="Detail"/>
 
 Hides verbose diagnostics behind a **"Show details ▼"** link.
 
@@ -581,8 +583,8 @@ GlassMessage.Create("OneDrive failed to sync 'Annual_Report_Q4_2025.xlsx'.")
 
 <table>
 <tr>
-<td align="center"><b>Determinate</b><br/><img src="Images/Determinate%20Progress%20Bar.png" width="430" alt="Determinate"/></td>
-<td align="center"><b>Indeterminate (marquee)</b><br/><img src="Images/Indeterminate%20Progress%20Bar.png" width="430" alt="Indeterminate"/></td>
+<td align="center"><b>Determinate</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Determinate%20Progress%20Bar.png" width="430" alt="Determinate"/></td>
+<td align="center"><b>Indeterminate (marquee)</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Indeterminate%20Progress%20Bar.png" width="430" alt="Indeterminate"/></td>
 </tr>
 </table>
 
@@ -625,8 +627,8 @@ and `Download` are the same glowing-packet style flowing opposite ways):
 
 <table>
 <tr>
-<td align="center"><b>Download flow (incoming packets)</b><br/><img src="Images/Progress%20Activity%20%E2%80%94%20Download%20Flow.png" width="430" alt="Download activity flow"/></td>
-<td align="center"><b>Activity gallery — every family</b><br/><img src="Images/Progress%20Activity%20%E2%80%94%20Gallery%20%28all%20styles%29.png" width="430" alt="Activity gallery"/></td>
+<td align="center"><b>Download flow (incoming packets)</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Progress%20Activity%20%E2%80%94%20Download%20Flow.png" width="430" alt="Download activity flow"/></td>
+<td align="center"><b>Activity gallery — every family</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Progress%20Activity%20%E2%80%94%20Gallery%20%28all%20styles%29.png" width="430" alt="Activity gallery"/></td>
 </tr>
 </table>
 
@@ -640,7 +642,7 @@ as an operation moves between phases (e.g. `Compress` → `Upload`).
 
 <br/>
 
-<img src="Images/Custom%20Bitmap%20Icon.png" width="460" alt="Custom icon"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Custom%20Bitmap%20Icon.png" width="460" alt="Custom icon"/>
 
 ```csharp
 using var bmp = new Bitmap(48, 48);
@@ -668,7 +670,7 @@ The caller owns a custom bitmap. Keep it alive until the dialog closes, includin
 
 <br/>
 
-<img src="Images/Ctrl+C%20%20Copy%20to%20Clipboard.png" width="460" alt="Ctrl+C copy"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Ctrl%2BC%20%20Copy%20to%20Clipboard.png" width="460" alt="Ctrl+C copy"/>
 
 No code required:
 - **Ctrl+C** copies the title + message to the clipboard (great for support tickets).
@@ -684,8 +686,8 @@ No code required:
 
 <table>
 <tr>
-<td align="center"><b>SlideDown</b><br/><img src="Images/SlideDown%20Animation.png" width="430" alt="SlideDown"/></td>
-<td align="center"><b>Scale</b><br/><img src="Images/Scale%20Animation.png" width="430" alt="Scale"/></td>
+<td align="center"><b>SlideDown</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/SlideDown%20Animation.png" width="430" alt="SlideDown"/></td>
+<td align="center"><b>Scale</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Scale%20Animation.png" width="430" alt="Scale"/></td>
 </tr>
 </table>
 
@@ -706,7 +708,7 @@ GlassMessage.Create("Glass.Message 1.0 is available.")
 
 <br/>
 
-<img src="Images/All%20Buttons%20+%20ShowEx%20Rich%20Result.png" width="460" alt="ShowEx rich result"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/All%20Buttons%20%2B%20ShowEx%20Rich%20Result.png" width="460" alt="ShowEx rich result"/>
 
 `ShowEx()` returns a `GlassResult` with the **button + checkbox + input** at once.
 
@@ -727,7 +729,7 @@ if (r.Button != DialogResult.Cancel)            // user chose Uninstall (Yes) or
 
 The **Security Alert** demo uses the same pattern — the second button (`Secure account`) returns `DialogResult.No`:
 
-<img src="Images/Security%20Alert%20%E2%80%94%20Sign-in.png" width="460" alt="Security alert"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Security%20Alert%20%E2%80%94%20Sign-in.png" width="460" alt="Security alert"/>
 
 ```csharp
 var r = GlassMessage.Create("We noticed a new sign-in to your Contoso account.")
@@ -746,7 +748,7 @@ if (r.Button == DialogResult.No) { /* "Secure account" */ }
 
 <br/>
 
-<img src="Images/Async%20ShowAsync.png" width="460" alt="Async"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Async%20ShowAsync.png" width="460" alt="Async"/>
 
 Shows without blocking the UI thread; `await` the chosen button. A `CancellationToken` closes it (→ `DialogResult.Cancel`).
 
@@ -775,7 +777,7 @@ private static async void SyncWorkspace()
 
 <br/>
 
-<img src="Images/RTL%20%28Right-to-Left%29%20Layout.png" width="460" alt="RTL"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/RTL%20%28Right-to-Left%29%20Layout.png" width="460" alt="RTL"/>
 
 ```csharp
 GlassMessage.Create("فشل حفظ الملف: تقرير_الربع_الرابع.docx")
@@ -795,14 +797,14 @@ GlassMessage.Create("فشل حفظ الملف: تقرير_الربع_الراب�
 
 <table>
 <tr>
-<td align="center"><b>Windows Update — Release Notes</b><br/><img src="Images/Windows%20Update%20%E2%80%94%20Release%20Notes.png" width="430" alt="Release notes"/></td>
-<td align="center"><b>Storage Migration Wizard</b><br/><img src="Images/Storage%20Migration%20Wizard.png" width="430" alt="Migration"/></td>
+<td align="center"><b>Windows Update — Release Notes</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Windows%20Update%20%E2%80%94%20Release%20Notes.png" width="430" alt="Release notes"/></td>
+<td align="center"><b>Storage Migration Wizard</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Storage%20Migration%20Wizard.png" width="430" alt="Migration"/></td>
 </tr>
 </table>
 
 The **EULA** composition pairs a `Detail(...)` panel with a checkbox. The host must check the rich result before continuing; the library does not enforce acceptance:
 
-<img src="Images/End-User%20Licence%20Agreement.png" width="460" alt="EULA"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/End-User%20Licence%20Agreement.png" width="460" alt="EULA"/>
 
 ```csharp
 var agreement = GlassMessage.Create("Please review and accept the licence terms to continue.")
@@ -853,8 +855,8 @@ if (r.Button == DialogResult.OK)
 
 <table>
 <tr>
-<td align="center"><b>Single</b><br/><img src="Images/Toast%20%E2%80%94%20Bottom-Right.png" width="430" alt="Single toast"/></td>
-<td align="center"><b>Auto-stacking</b><br/><img src="Images/Toast%20%E2%80%94%20Stacking.png" width="430" alt="Stacking toasts"/></td>
+<td align="center"><b>Single</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Toast%20%E2%80%94%20Bottom-Right.png" width="430" alt="Single toast"/></td>
+<td align="center"><b>Auto-stacking</b><br/><img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Toast%20%E2%80%94%20Stacking.png" width="430" alt="Stacking toasts"/></td>
 </tr>
 </table>
 
@@ -898,7 +900,7 @@ GlassToast.Show(new GlassToastOptions
 
 <br/>
 
-<img src="Images/Async%20Builder%20%28ShowExAsync%29.png" width="460" alt="Async builder"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Async%20Builder%20%28ShowExAsync%29.png" width="460" alt="Async builder"/>
 
 The whole builder is awaitable too — so input / checkbox / dropdown dialogs run without blocking the UI thread. `ShowExAsync()` returns the full `GlassResult`; both accept a `CancellationToken` (cancelling yields `DialogResult.Cancel`).
 
@@ -926,7 +928,7 @@ if (r.Button == DialogResult.OK)
 
 <br/>
 
-<img src="Images/Live%20Progress%20Controller.png" width="460" alt="Live progress controller"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Live%20Progress%20Controller.png" width="460" alt="Live progress controller"/>
 
 `ShowProgress()` opens a **non-blocking** progress dialog and hands back a thread-safe `GlassProgressController`. Drive the bar and caption from a worker, then `Complete()` it — or detect a user cancel via `WasCanceledByUser`. Pair it with `ProgressActivity(...)` (see **§8 · Progress**) and `SetActivity(...)` so the bar's animation matches the work — and switches as it moves between phases.
 
@@ -962,7 +964,7 @@ Updates are best-effort and coalesced per kind: intermediate values can be skipp
 
 <br/>
 
-<img src="Images/Icon%20System%20Sound.png" width="460" alt="Icon system sound"/>
+<img src="https://gcfernando.github.io/glass-winforms-messagebox/Images/Icon%20System%20Sound.png" width="460" alt="Icon system sound"/>
 
 Play the Windows system sound that matches the icon (Information / Warning / Error / Question) when the dialog opens, just like the classic `MessageBox`.
 
@@ -1390,7 +1392,7 @@ dotnet build Glass.sln -c Release   # build everything
 
 ## 🚢 Release pipeline
 
-Releases are produced by [`.github/workflows/release.yml`](https://github.com/gcfernando/glass/blob/main/.github/workflows/release.yml), triggered by pushing a version tag (`git push origin v1.2.3`), publishing a GitHub Release, or a manual run. The pipeline is split into focused jobs so independent work runs in parallel and a failure points straight at the stage that broke:
+Releases are produced by [`.github/workflows/release.yml`](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/.github/workflows/release.yml), triggered by pushing a version tag (`git push origin v1.2.3`), publishing a GitHub Release, or a manual run. The pipeline is split into focused jobs so independent work runs in parallel and a failure points straight at the stage that broke:
 
 ```text
 metadata ─► test ─┬─► package ─┐
@@ -1476,10 +1478,10 @@ Password inputs return text to the host application; avoid logging `GlassResult.
 
 ## 📄 Support and license
 
-Licensed under the **MIT License** — see [LICENSE](LICENSE). `Copyright (c) 2026 Gehan Fernando`
+Licensed under the **MIT License** — see [LICENSE](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/LICENSE). `Copyright (c) 2026 Gehan Fernando`
 
 ---
 
 ## Documentation links
 
-[Read all Glass.Message guides online](https://gcfernando.github.io/glass/documentation/) · [Project overview](https://gcfernando.github.io/glass/) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)
+[Read all Glass.Message guides online](https://gcfernando.github.io/glass-winforms-messagebox/documentation/) · [Project overview](https://gcfernando.github.io/glass-winforms-messagebox/) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)
