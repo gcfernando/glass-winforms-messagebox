@@ -2,7 +2,15 @@
 
 <a id="️-running-the-demo"></a>
 
-# 🪟 Glass.Message — Modern MessageBox Replacement for WinForms (C#/.NET)
+<a id="-glassmessage--modern-messagebox-replacement-for-winforms-cnet"></a>
+
+# Glass.Message — Modern WinForms Dialogs for .NET
+
+<p align="center"><strong>Familiar dialogs. Thoughtful themes. A clearer desktop experience.</strong></p>
+
+[![Repository standards](https://github.com/gcfernando/glass-winforms-messagebox/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/glass-winforms-messagebox/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/glass-winforms-messagebox/)
+
+> **Start here:** [Install and start](#guide-quick-start) · [See the dialogs](#guide-preview-gallery) · [Explore the API](#guide-api-overview) · [Read the limitations](#guide-troubleshooting-and-limitations)
 
 **Read online:** [Documentation website](https://gcfernando.github.io/glass-winforms-messagebox/) · [All guides](https://gcfernando.github.io/glass-winforms-messagebox/documentation/)
 
@@ -163,6 +171,8 @@ progress.SetActivity(GlassProgressActivity.Sync);     // ripple eases both ways
 
 ---
 
+<a id="guide-preview-gallery"></a>
+
 ## 🖼️ Preview Gallery
 
 <table>
@@ -243,6 +253,8 @@ GlassMessage.Create("Mica backdrop applied.")
 ---
 
 <a id="-quick-start"></a>
+
+<a id="guide-quick-start"></a>
 
 ## 🚀 Quick start
 
@@ -1038,6 +1050,8 @@ GlassMessage.PlaySystemSounds = true;
 
 ---
 
+<a id="guide-api-overview"></a>
+
 ## 🔧 API Overview
 
 <details markdown="1">
@@ -1413,6 +1427,8 @@ Windows-only jobs build the library because it targets .NET Framework 4.8.1 and 
 ---
 
 <a id="-faq"></a>
+
+<a id="guide-troubleshooting-and-limitations"></a>
 
 ## 🛠️ Troubleshooting and limitations
 

@@ -1,6 +1,12 @@
-# 🪟 Glass.Message — WinForms MessageBox Replacement for C# and .NET
+[Glass.Message documentation](README.md)
+
+<a id="-glassmessage--winforms-messagebox-replacement-for-c-and-net"></a>
+
+# Glass.Message — WinForms Dialogs from NuGet
 
 **The modern `MessageBox` replacement for .NET WinForms — Windows 11 ready, explicit, familiar dialog APIs.**
+
+> **In this guide:** [Get started](#guide-install) · [Why Glass.Message?](#guide-why-glassmessage) · [What's new in v1.0.6](#guide-whats-new-in-v106)
 
 Mica & Acrylic backdrops · dark/light theme detection · fluent builder API · async/await dialogs · inline text & password inputs · activity-aware live progress bars · toast notifications · per-monitor DPI · mirrored RTL layout.
 
@@ -12,6 +18,8 @@ Mica & Acrylic backdrops · dark/light theme detection · fluent builder API · 
 ![Glass.Message feature gallery — modern Windows 11 styled WinForms dialog](https://raw.githubusercontent.com/gcfernando/glass-winforms-messagebox/main/Images/Feature%20Gallery.png)
 
 ---
+
+<a id="guide-why-glassmessage"></a>
 
 ## Why Glass.Message?
 
@@ -31,6 +39,8 @@ No new dependencies. No additional configuration. Works on .NET Framework 4.8.1 
 
 ---
 
+<a id="guide-whats-new-in-v106"></a>
+
 ## 🆕 What's new in v1.0.6
 
 This maintenance release coalesces rapid `GlassProgressController` updates and caches toast, close-button and countdown paint resources. The repository includes concurrency, handle-growth, lifecycle and DPI-capture tests. These describe available checks, not a fresh test result: run them in a Windows desktop session and inspect generated captures for visual quality.
@@ -38,6 +48,8 @@ This maintenance release coalesces rapid `GlassProgressController` updates and c
 Full technical details: [CHANGELOG.md](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/CHANGELOG.md).
 
 ---
+
+<a id="guide-install"></a>
 
 ## Install
 

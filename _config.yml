@@ -25,13 +25,13 @@ defaults:
   - scope:
       path: "README.md"
     values:
-      title: "Glass.Message — WinForms MessageBox Replacement for .NET"
-      description: "A Windows Forms MessageBox replacement with Mica and Acrylic backdrops, async dialogs, inline inputs, progress bars and toast notifications."
+      title: "Glass.Message — Modern WinForms Dialogs for .NET"
+      description: "Add themed Windows Forms dialogs, inputs, progress indicators and toasts with Glass.Message for C#/.NET. Explore installation, previews and migration notes."
   - scope:
       path: "README.nuget.md"
     values:
-      title: "Glass.Message NuGet Package — WinForms Dialog Library"
-      description: "Install Glass.Message from NuGet and use themed Windows Forms dialogs, async inputs, progress indicators and toast notifications."
+      title: "Glass.Message — WinForms Dialogs from NuGet"
+      description: "Install Glass.Message from NuGet and add themed C# Windows Forms dialogs, async inputs, progress indicators and toast notifications."
 
 # Public documentation navigation and presentation.
 repository: gcfernando/glass-winforms-messagebox
