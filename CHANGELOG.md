@@ -226,6 +226,7 @@ or public API changes.
 ### Fixed
 
 #### Thread safety & concurrency
+
 - **Volatile static properties** — `DefaultTheme`, `UseRoundedCorners`, and
   `PlaySystemSounds` in `GlassMessage` now use `volatile` backing fields, ensuring
   writes from any thread are immediately visible on all architectures including ARM64.
@@ -252,6 +253,7 @@ or public API changes.
   throwing callback never prevents the toast from closing.
 
 #### Animation & DPI
+
 - **Scale animation close-button hit-test** (#5) — `_closeBtnBounds` is now
   recalculated after every scale frame in `ApplyAnimationFrame`, so the × button
   remains clickable throughout the opening/closing animation.
@@ -266,6 +268,7 @@ or public API changes.
   parameter and caps width against the target screen's working area, not the primary.
 
 #### GDI+ resource management
+
 - **Per-frame pen allocation** (#11) — the input border pen is now pre-allocated
   once in the constructor as `_inputBorderPen` and disposed in `Dispose()`, avoiding
   GDI+ handle churn on every `OnPaint` call.
@@ -274,10 +277,12 @@ or public API changes.
   case and making equality checks (`Dark == Default`) correct.
 
 #### Drag behaviour
+
 - **Dialog draggable off-screen** (#3) — `OnMouseMove` now calls `ClampToScreen`
   after each drag update, keeping the title bar (and drag handle) always reachable.
 
 #### API correctness
+
 - **`GlassResult` null implicit conversion** (#19) — the `implicit operator
   DialogResult` now uses `r?.Button ?? DialogResult.None` instead of `r.Button`,
   preventing a `NullReferenceException` when the result is assigned from `null`.
@@ -292,10 +297,12 @@ or public API changes.
   wider accessibility than intended.
 
 #### Docs & XML
+
 - **`Buttons(params string[])` XML doc** (#4) — updated to document the 3-label
   maximum and explain that labels beyond the third are silently ignored.
 
 #### Tests
+
 - Added `[CollectionDefinition("GlassStaticState")]` and applied
   `[Collection("GlassStaticState")]` to `GlassBuilderTests` and
   `GlassMessageStaticTests`, serialising the classes that mutate global static state
@@ -308,12 +315,14 @@ or public API changes.
   `Microsoft.NET.Test.Sdk` → **17.12.0**.
 
 #### Progress controller
+
 - Documented the intentional fire-and-forget design of `BeginInvoke` in
   `GlassProgressController.Marshal` — `SetValue`/`SetMessage` are best-effort UI
   refreshes that must not block worker threads; `Completion` remains the correct
   await point.
 
 #### Marquee timer
+
 - Halved marquee progress timer pressure: interval 16 ms → 33 ms (≈ 30 fps),
   phase step scaled proportionally so visual speed is unchanged.
 

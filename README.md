@@ -1485,3 +1485,7 @@ Licensed under the **MIT License** — see [LICENSE](https://github.com/gcfernan
 ## Documentation links
 
 [Read all Glass.Message guides online](https://gcfernando.github.io/glass-winforms-messagebox/documentation/) · [Project overview](https://gcfernando.github.io/glass-winforms-messagebox/) · [All developer projects](https://gcfernando.github.io/gcfernando/projects/)
+
+## Repository maintenance
+
+[Contributing](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/SECURITY.md) · [Repository standards](https://github.com/gcfernando/glass-winforms-messagebox/blob/main/REPOSITORY_STANDARDS.md)

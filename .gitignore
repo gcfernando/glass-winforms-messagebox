@@ -1,17 +1,22 @@
-################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# .NET build and IDE output (at any project depth)
+bin/
+obj/
+.vs/
+TestResults/
+*.user
+*.suo
 
-/.vs/Glass/FileContentIndex
-/Glass.Demo/bin/Debug/net8.0-windows
-/Glass.Demo/obj
-/Glass.Message/bin/Debug
-/Glass.Message/obj
-/Glass.Message.Tests/bin/Debug/net8.0-windows
-/Glass.Message.Tests/obj
-/.vs/Glass/v18
-/Glass.Demo/bin/Release/net8.0-windows
-/Glass.Message/bin/Release
-/Glass.Message.Tests/bin/Release/net8.0-windows
-/.vs
-/Glass.Message.Tests/bin
+# Shared local files and documentation build caches
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
+!.env.sample
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/

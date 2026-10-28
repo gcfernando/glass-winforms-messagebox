@@ -57,9 +57,9 @@ on:
         description: "Version to build (e.g. 1.2.3)"
         required: true
 
-# Needed so the release job can upload assets onto the Release.
+# Only the release job needs write access to publish release assets.
 permissions:
-  contents: write
+  contents: read
 
 # Serialise releases for the same ref. cancel-in-progress is intentionally false:
 # a run that has reached the publish stage must never be killed mid-flight, since a
@@ -81,11 +81,14 @@ jobs:
   # ---------------------------------------------------------------------------
   metadata:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     outputs:
       version: ${{ steps.ver.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
 
       # Resolve the version (strip a leading "v") from whichever trigger fired:
       #   push tag     -> github.ref_name        (e.g. v1.2.3)
@@ -133,7 +136,7 @@ jobs:
           Write-Host "----- release notes for v$ver -----`n$notes"
 
       - name: UploadReleaseNotes
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: release-notes
           path: release-notes.md
@@ -145,15 +148,18 @@ jobs:
   # ---------------------------------------------------------------------------
   test:
     runs-on: windows-latest
+    timeout-minutes: 60
     needs: metadata
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
 
       # Install the modern .NET SDKs. .NET Framework 4.8.1's targeting pack is
       # already present on the windows-latest image.
       - name: SetupDotnetSdks
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
           dotnet-version: |
             8.0.x
@@ -185,13 +191,16 @@ jobs:
   # ---------------------------------------------------------------------------
   package:
     runs-on: windows-latest
+    timeout-minutes: 60
     needs: [metadata, test]
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
 
       - name: SetupDotnetSdks
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
           dotnet-version: |
             8.0.x
@@ -211,7 +220,7 @@ jobs:
 
       # Bring back the CHANGELOG notes so they can be embedded in the package.
       - name: DownloadReleaseNotes
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: release-notes
 
@@ -252,7 +261,7 @@ jobs:
           Get-ChildItem artifacts | Format-Table Name, Length
 
       - name: UploadPackageArtifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: nuget-package
           path: |
@@ -270,13 +279,16 @@ jobs:
   # ---------------------------------------------------------------------------
   demo:
     runs-on: windows-latest
+    timeout-minutes: 60
     needs: [metadata, test]
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
 
       - name: SetupDotnetSdks
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
           dotnet-version: |
             8.0.x
@@ -308,7 +320,7 @@ jobs:
           }
 
       - name: UploadDemoArtifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: demo-app
           path: artifacts/Glass.Demo-*.zip
@@ -321,24 +333,27 @@ jobs:
   #    * On a UI release, it adds the assets to the existing Release.
   # ---------------------------------------------------------------------------
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     needs: [metadata, package, demo]
     if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
     steps:
       - name: DownloadPackageArtifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: nuget-package
           path: artifacts
 
       - name: DownloadDemoArtifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: demo-app
           path: artifacts
 
       - name: DownloadReleaseNotes
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: release-notes
 
@@ -348,7 +363,7 @@ jobs:
       # The curated CHANGELOG section becomes the body; generate_release_notes
       # then appends an auto "Full Changelog" compare link beneath it.
       - name: PublishReleaseAndAttachAssets
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
           tag_name: v${{ needs.metadata.outputs.version }}
           name: Glass.Message v${{ needs.metadata.outputs.version }}
@@ -367,16 +382,17 @@ jobs:
   # ---------------------------------------------------------------------------
   publish-nuget:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     needs: [metadata, release]
     if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
     steps:
       - name: SetupDotnetSdk
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
           dotnet-version: 8.0.x
 
       - name: DownloadPackageArtifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: nuget-package
           path: artifacts
