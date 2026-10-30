@@ -17,11 +17,11 @@ Find installation, WinForms dialog examples and the source contracts behind Glas
 
 | Task | Guide |
 |---|---|
-| Add the library to a Windows Forms app | [Quick start](README.md#-quick-start) and [installation](README.md#-installation) |
-| Migrate MessageBox calls safely | [Overview and argument ordering](README.md#-the-one-line-pitch) |
-| Use inputs, async dialogs, progress or toasts | [Usage guide](README.md#-complete-usage-guide) and [API overview](README.md#-api-overview) |
-| Customize themes and defaults | [Configuration](README.md#-configuration) and [styling](README.md#-styling-and-customization) |
-| Build and verify changes | [Development and testing](README.md#-running-the-demo) and [project requirements](README.md#-requirements) |
+| Add the library to a Windows Forms app | [Quick start](REFERENCE.md#-quick-start) and [installation](REFERENCE.md#-installation) |
+| Migrate MessageBox calls safely | [Overview and argument ordering](REFERENCE.md#-the-one-line-pitch) |
+| Use inputs, async dialogs, progress or toasts | [Usage guide](REFERENCE.md#-complete-usage-guide) and [API overview](REFERENCE.md#-api-overview) |
+| Customize themes and defaults | [Configuration](REFERENCE.md#-configuration) and [styling](REFERENCE.md#-styling-and-customization) |
+| Build and verify changes | [Development and testing](REFERENCE.md#-running-the-demo) and [project requirements](REFERENCE.md#-requirements) |
 | Read the package-facing guide | [NuGet README](README.nuget.md) |
 | Review historical release changes | [Changelog](CHANGELOG.md) |
 
