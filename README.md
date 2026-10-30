@@ -104,7 +104,7 @@ dotnet run --project Glass.Demo
 
 Tests target all four library frameworks. UI, stress and capture tests need a Windows desktop session. Add `-f net10.0-windows` to the test command to check just that installed target. Inspect capture PNGs to assess rendering; their existence alone does not establish visual quality.
 
-Builds invoke the optional signing script. Without a configured developer certificate, signing warns and output remains unsigned. See [contribution guidance](CONTRIBUTING.md), [release workflow](.github/workflows/release.yml) and [signing setup](tools/Setup-DevCert.ps1) before preparing a distribution.
+Builds invoke the optional signing script. Without a configured developer certificate, signing warns and output remains unsigned. See [contribution guidance](CONTRIBUTING.md), [release workflow](https://github.com/gcfernando/glass-winforms-messagebox/actions/workflows/release.yml) and [signing setup](tools/Setup-DevCert.ps1) before preparing a distribution.
 
 <a id="guide-troubleshooting-and-limitations"></a>
 
